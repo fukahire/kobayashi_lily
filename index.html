@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="https://www.kobayashi.com.tw/images/favicon.ico">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="/fontawesome/all.css">
+    <script defer src="js/all.js"></script>
+    <title>常見問題</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="banner__title">
+            <p>CONTACT</p>
+        </div>
+        <div class="banner__subtitle">
+            <p>聯絡我們</p>
+        </div>
+    </div>
+    <div class="breadcrumbs">
+        <div class="breadcrumbs__item"><i class="fas fa-home"></i></div>
+        <div class="breadcrumbs__arrow"><i class="fas fa-chevron-right"></i></div>
+        <div class="breadcrumbs__item">
+            <p>顧客專區</p>
+        </div>
+        <div class="breadcrumbs__arrow"><i class="fas fa-chevron-right"></i></div>
+        <div class="breadcrumbs__item">
+            <p>聯絡我們</p>
+        </div>
+    </div>
+    <div class="contact">
+        <div class="warn">
+            <div class="warn__icon"><i class="fas fa-exclamation"></i></div>
+            <div class="warn__message">
+                <p>您的意見與反應是我們成長的條件感謝您的愛護與支持，<br>送出後我們將會盡速與您聯絡，謝謝。</p><br>
+                <p class="warn__message--hint">※ 以下欄位皆為必填。</p>
+            </div>
+        </div>
+        <div class="form" id="contactform">
+            <div class="formblock formblock--head">
+                <label class="formblock__tag" for="fullname">姓名</label>
+                <div class="formblock__input">
+                    <input class="formblock__textblock" type="text" id="fullname" required>
+                    <p class="formblock__validation formblock__required">請輸入您的姓名</p>
+                </div>
+            </div>
+            <div class="formblock">
+                <label class="formblock__tag">性別</label>
+                <div class="formblock__input">
+                    <div class="formblock__radio">
+                        <div>
+                            <input type="radio" value="boy" id="boy" name="gender"><label for="boy">先生</label>
+                        </div>
+                        <div>
+                            <input type="radio" value="girl" id="girl" name="gender"><label for="girl">小姐</label>
+                        </div>
+                    </div>
+                    <p class="formblock__validation formblock__required">請選擇您的性別</p>
+                </div>
+            </div>
+            <div class="formblock">
+                <label class="formblock__tag" for="phone">電話</label>
+                <div class="formblock__input">
+                    <input class="formblock__textblock" type="text" id="phone" required>
+                    <p class="formblock__validation formblock__required">請輸入您的聯絡電話</p>
+                </div>
+            </div>
+            <div class="formblock">
+                <label class="formblock__tag" for="email">信箱</label>
+                <div class="formblock__input">
+                    <input class="formblock__textblock" type="email" id="email" required>
+                    <p class="formblock__validation formblock__required">請輸入您的電子信箱</p>
+                    <p class="formblock__validation formblock__errorhint">Email格式錯誤，請重新確認</p>
+                </div>
+            </div>
+            <div class="formblock">
+                <label class="formblock__tag" for="shop">消費店別</label>
+                <div class="formblock__input">
+                    <div class="formblock__textblock formblock__textblock--select">
+                        <select class="formblock__select formblock__select--blocktwo" id="area" name="area" required></select>
+                        <select class="formblock__select formblock__select--blocktwo" id="shop" name="shop" required>
+                            <option value="">請選擇門市</option>
+                        </select>
+                    </div>
+                    <p class="formblock__validation formblock__required">請選擇消費店別</p>
+                </div>
+            </div>
+            <div class="formblock">
+                <label class="formblock__tag">消費日期</label>
+                <div class="formblock__input">
+                    <div>
+                        <div class="formblock__textblock formblock__textblock--select">
+                            <select class="formblock__select formblock__select--blockthree" id="year" name="year" required>
+                                <option value="">年</option>
+                            </select>
+                            <select class="formblock__select formblock__select--blockthree" id="month" name="month" required>
+                                <option value="">月</option>
+                            </select>
+                            <select class="formblock__select formblock__select--blockthree" id="date" name="date" required>
+                                <option value="">日</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p class="formblock__validation formblock__required">請選擇消費日期</p>
+                </div>
+            </div>
+            <div class="formblock">
+                <label class="formblock__tag">消費類別</label>
+                <div class="formblock__input">
+                    <div class="formblock__textblock formblock__textblock--select">
+                        <select class="formblock__select" id="product" required>
+                            <option value="">請選擇分類</option>
+                        </select>
+                    </div>
+                    <p class="formblock__validation formblock__required">請選擇消費類別</p>
+                </div>
+            </div>
+            <div class="formblock">
+                <label class="formblock__tag" for="message">留言</label>
+                <div class="formblock__input">
+                    <textarea class="formblock__textblock formblock__textblock--message" rows="10" cols="81" id="message"
+                    required></textarea>
+                    <p class="formblock__validation formblock__required">請輸入留言內容</p>
+                </div>
+            </div>
+            <div class="formblock">
+                <label class="formblock__tag">打勾後完成驗證
+                    <div class="form__sign--arrow">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </label>
+                <div class="g-recaptcha" data-sitekey="6LexEYYcAAAAAHroNR97AtV6cyVkjKAOWjnfeIk8"></div>
+            </div>
+            <div class="formblock formblock--button">
+                <input class="formblock__button" id="resetBtn" type="submit" value="清除重填">
+                <input class="formblock__button formblock__button--submit" id="submitBtn" type="submit" value="確認送出">
+            </div>
+
+        </div>
+    </div>
+    <a class="button" href="/kobayashi/chronology.html" class="button">小林大事紀</a>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+
+</html>
