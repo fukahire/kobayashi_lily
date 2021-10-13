@@ -4,27 +4,173 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title icon -->
     <link rel="shortcut icon" type="image/x-icon" href="https://www.kobayashi.com.tw/images/favicon.ico">
-    <link rel="stylesheet" href="/kobayashi/css/chronology.css">
-    <link rel="stylesheet" href="/kobayashi/fontawesome/all.css">
-    <script defer src="/kobayashi/js/all.js"></script>
+    <!-- 頁面css -->
+    <link rel="stylesheet" href="css/chronology.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <title>小林大事紀</title>
 </head>
-<header>
-    <div class="menu">
-    </div>
-</header>
 <body>
+    <header class="header">
+        <div class="menu">
+            <!-- 漢堡選單 -->
+            <div class="menu--hamburger pc--none"><i class="fas fa-bars"></i></div>
+            <div class="menu--phone pc--none">
+                <div class="phonesearch">
+                    <i class="fas fa-search phonesearch__icon"></i>
+                    <input type="text" placeholder="請輸入關鍵字">
+                    <div class="list--close">
+                        <!-- <i class="fas fa-times list--close"></i> -->
+                    </div>
+                    
+                </div>
+                <ul class="phonelist">
+                    <li class="phonelist__button"><a href="#">登入/註冊</a></li>
+                    <li class="phonelist__item phonelist__toggle"><a href="#">會員中心</a></li>
+                    <ul class="sublist">
+                        <li class="phonelist__item phonelist__item--sub"><a href="#">登入/註冊</a></li>
+                    </ul>
+                    <li class="phonelist__item phonelist__toggle"><a href="#">網路商店</a></li>
+                    <ul class="sublist">
+                        <li class="phonelist__item phonelist__item--sub"><a href="#">光學眼鏡</a></li>
+                        <li class="phonelist__item phonelist__item--sub"><a href="#">太陽眼鏡</a></li>
+                        <li class="phonelist__item phonelist__item--sub"><a href="#">隱形眼鏡(透明)</a></li>
+                        <li class="phonelist__item phonelist__item--sub"><a href="#">隱形眼鏡(彩色)</a></li>
+                        <li class="phonelist__item phonelist__item--sub"><a href="#">保健食品/其他</a></li>
+                    </ul>
+                    <li class="phonelist__item"><a href="#">門市查詢</a></li>
+                    <li class="phonelist__item"><a href="#">最新消息</a></li>
+                    <li class="phonelist__item phonelist__toggle"><a href="#">顧客專區</a></li>
+                    <ul class="sublist">
+                        <li class="phonelist__item phonelist__item--sub"><a href="#">顧客專區</a></li>
+                        <li class="phonelist__item phonelist__item--sub"><a href="#">會員卡介紹</a></li>
+                        <li class="phonelist__item phonelist__item--sub"><a href="#">電子保證書</a></li>
+                        <li class="phonelist__item phonelist__item--sub"><a href="#">常見問題</a></li>
+                        <li class="phonelist__item phonelist__item--sub"><a href="#">連絡小林</a></li>
+                    </ul>
+                    <li class="phonelist__item phonelist__toggle"><a href="#">專業教室</a></li>
+                    <ul class="sublist">
+                        <li class="phonelist__item phonelist__item--sub"><a href="#">專業教室</a></li>
+                        <li class="phonelist__item phonelist__item--sub"><a href="#">視力保健教室</a></li>
+                        <li class="phonelist__item phonelist__item--sub"><a href="#">鏡框教室</a></li>
+                        <li class="phonelist__item phonelist__item--sub"><a href="#">鏡片教室</a></li>
+                        <li class="phonelist__item phonelist__item--sub"><a href="#">多焦鏡片教室</a></li>
+                        <li class="phonelist__item phonelist__item--sub"><a href="#">濾藍光鏡片教室</a></li>
+                        <li class="phonelist__item phonelist__item--sub"><a href="#">隱形眼鏡教室</a></li>
+                        <li class="phonelist__item phonelist__item--sub"><a href="#">太陽眼鏡教室</a></li>
+                    </ul>
+                    <li class="phonelist__item phonelist__toggle"><a href="#">關於小林</a></li>
+                    <ul class="sublist">
+                        <li class="phonelist__item phonelist__item--sub"><a href="#">關於小林眼鏡</a></li>
+                        <li class="phonelist__item phonelist__item--sub"><a href="#">小林大事紀</a></li>
+                        <li class="phonelist__item phonelist__item--sub"><a href="#">小林榮譽榜</a></li>
+                        <li class="phonelist__item phonelist__item--sub"><a href="#">公益參與</a></li>
+                    </ul>
+                    <li class="phonelist__item"><a href="#">人才招募</a></li>
+                    <li class="phonelist__item"><a href="#">About Us</a></li>
+                </ul>
+                <div class="phonemedia">
+                    <div class="phonemedia__item">
+                        <img src="https://www.kobayashi.com.tw/images/google.png" alt="" class="phonemedia__platform">
+                        <img src="https://www.kobayashi.com.tw/images/ios.png" alt="" class="phonemedia__platform">
+                    </div>
+                    <div class="phonemedia__item">
+                        <img src="https://www.kobayashi.com.tw/images/icon_ig.png" alt="" class="phonemedia__app">
+                        <img src="https://www.kobayashi.com.tw/images/icon_fb.png" alt="" class="phonemedia__app">
+                        <img src="https://www.kobayashi.com.tw/images/icon_you.png" alt="" class="phonemedia__app">
+                    </div>
+                </div>
+            </div>
+            <!-- 主選單 -->
+            <ul class="mainmenu">
+                <li class="mainmenu__logo">
+                    <img src="https://www.kobayashi.com.tw/images/logo.png" alt="">
+                </li>
+                <li class="mainmenu__item mainmenu__item--webshop phone--none"><a class="mainmenu__txt mainmenu__txt--red" href="#">網路商店</a>
+                <div class="dropdown">
+                    <div class="dropdown__box">
+                        <ul class="dropdownlist">
+                            <li class="dropdownlist__item"><i class="fas fa-glasses"></i><a href="#">光學鏡框</a></li>
+                            <li class="dropdownlist__item"><i class="fas fa-glasses"></i><a href="#">太陽眼鏡</a></li>
+                            <li class="dropdownlist__item"><i class="far fa-circle"></i><a href="#">隱形眼鏡(透明)</a></li>
+                            <li class="dropdownlist__item"><i class="far fa-circle"></i><a href="#">隱形眼鏡(彩色)</a></li>
+                            <li class="dropdownlist__item"><i class="fas fa-archive"></i><a href="#">保健食品/其他</a></li>
+                        </ul>
+                        <div class="dropdownevent">
+                            <img class="dropdownevent__img" src="https://www.kobayashi.com.tw/upload/banner_menu/6143ef0bef211.jpg" alt="">
+                            <div class="dropdownevent__caption"><a href="#">KUKKA花兒 最新活動</a></div>
+                        </div>
+                    </div>
+                </div></li>
+                <li class="mainmenu__item phone--none"><a class="mainmenu__txt" href="#">專業教室</a>
+                <ul class="menulist">
+                    <li class="menulist__item"><a href="">視力保健教室</a></li>
+                    <li class="menulist__item"><a href="">鏡框教室</a></li>
+                    <li class="menulist__item"><a href="">鏡片教室</a></li>
+                    <li class="menulist__item"><a href="">多焦鏡片教室</a></li>
+                    <li class="menulist__item"><a href="">濾藍光鏡片教室</a></li>
+                    <li class="menulist__item"><a href="">隱形眼鏡教室</a></li>
+                    <li class="menulist__item"><a href="">太陽眼鏡教室</a></li>
+                </ul></li>
+                <li class="mainmenu__item phone--none"><a class="mainmenu__txt" href="#">門市查詢</a></li>
+                <li class="mainmenu__item phone--none"><a class="mainmenu__txt" href="#">最新消息</a></li>
+                <li class="mainmenu__item phone--none"><a class="mainmenu__txt" href="#">顧客服務</a>
+                <ul class="menulist">
+                    <li class="menulist__item"><a href="#">會員卡介紹</a></li>
+                    <li class="menulist__item"><a href="#">會員保證書</a></li>
+                    <li class="menulist__item"><a href="#">常見問題</a></li>
+                    <li class="menulist__item"><a href="#">聯絡小林</a></li>
+                </ul></li>
+                <li class="mainmenu__item phone--none"><a class="mainmenu__txt" href="#">聯絡小林</a></li>
+            </ul>
+            <!-- 副選單 -->
+            <ul class="submenu">
+                <li class="submenu__item submenu__item--search phone--none"><i class="fas fa-search"></i>
+                <div><a class="submenu__item--search--ch" href="#">全站搜尋</a><a class="submenu__item--search--eng" href="#">SEARCH</a></div></li>
+                <li class="submenu__item submenu__item--member phone--none"><i class="far fa-user"></i><a href="#">會員中心</a></li>
+                <li class="submenu__item submenu__item--cart"><i class="fas fa-shopping-cart"></i><a class="phone--none" href="#">預訂區</a></li>
+                <div class="sign">
+                    <div class="sign__popup">
+                        <div class="sign--close"></div>
+                        <div class="sign__block sign__block--input">
+                            <label class="sign__label" for="account">帳號</label>
+                            <input class="sign__input" type="text" id="account" placeholder="請輸入帳號(英文+數字)">
+                        </div>
+                        <div class="sign__block sign__block--input">
+                            <label class="sign__label" for="password">密碼</label>
+                            <input class="sign__input" type="text" id="password" placeholder="請輸入密碼">
+                        </div>
+                        <div class="sign__block sign__block--button">
+                            <input type="submit" value="登入" class="sign__button">
+                        </div>
+                        <div class="sign__block">
+                            <a href="#" class="sign__url sign__url--forgetpassword">忘記密碼</a>
+                            <a href="#" class="sign__url">忘記帳號</a>
+                        </div>
+                        <div class="sign__block"><p class="sign__caption">還沒加入會員嗎？ <a class="sign__url sign__url--sign" href="#">立即註冊</a></p></div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </header>
     <div class="banner">
         <div class="banner__title"><p>HISTORY</p></div>
         <div class="banner__subtitle"><p>小林大事紀</p></div>
     </div>
     <div class="breadcrumbs">
-        <div class="breadcrumbs__item"><i class="fas fa-home"></i></div>
+        <div class="breadcrumbs__item"><a href="#"><i class="fas fa-home"></i></a></div>
         <div class="breadcrumbs__arrow"><i class="fas fa-chevron-right"></i></div>
-        <div class="breadcrumbs__item"><p>關於小林</p></div>
+        <div class="breadcrumbs__item">
+            <a href="#"><p>顧客專區</p></a>
+        </div>
         <div class="breadcrumbs__arrow"><i class="fas fa-chevron-right"></i></div>
-        <div class="breadcrumbs__item"><p>小林大事紀</p></div>
+        <div class="breadcrumbs__item">
+            <p>聯絡我們</p>
+        </div>
     </div>
     <div class="timeline">
         <div class="timeblock">
@@ -373,9 +519,10 @@
             </div>
         </div>
     </div>
-    <a class="button" href="/kobayashi/index.html" class="button">聯絡小林</a>
-</div>
-      
-      
+    <a class="button" href="index.html" class="button">聯絡小林</a>
+    <!-- </div> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/header.js"></script>
 </body>
 </html>

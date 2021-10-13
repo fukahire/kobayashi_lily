@@ -1,0 +1,502 @@
+@import '_header_rwd.sass'
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+    font-family: Arial, 'Microsoft JhengHei'
+
+body
+    // background: salmon
+
+.header
+    transition: .4s ease
+    a
+        color: #6B6B6B
+        text-decoration: none
+    ul, li
+        list-style: none
+    .menu
+        background: white
+        display: flex
+        justify-content: space-between
+        box-shadow: 3px 3px 10px gray
+        height: 80px
+        .mainmenu
+            display: inline-flex
+            align-items: center
+            margin: 20px 0
+            &__item
+                text-align: center
+                height: 20px
+                width: 110px
+                border-left: 2px dotted #dedede
+                position: relative
+                &--webshop
+                    position: static
+                a
+                    line-height: 20px
+                    position: relative
+                    letter-spacing: 2px
+                &:hover > a
+                    font-weight: 600
+                &:hover > .mainmenu__txt--red
+                    color: #ff5773
+                &:hover > .menulist
+                    max-height: 1000px
+                    transition: .6s ease
+                    transition-delay: .1s
+                &:hover > .dropdown
+                    // visibility: visible
+                    max-height: 300px
+                    transition-delay: .1s
+                    transition: .6s ease
+            &__txt--red
+                color: #ff5773
+            &__txt::after
+                display: block
+                content: ''
+                width: 65px
+                height: 3px
+                border-bottom: 3.5px solid #089e78
+                position: absolute
+                transform: translate(-50%, 0) scaleX(0)
+                transition: .2s cubic-bezier(0,0,0,0)
+                left: 35px
+                top: 22px
+            &__txt--red::after
+                border-bottom: 3.5px solid #ff5773
+            &__txt:hover::after
+                transform: translate(-50%, 0) scaleX(1)
+                transition: .2s cubic-bezier(0,0,0,0)
+            &__logo
+                width: 192px
+                margin: 0 30px
+                img
+                    width: 100%
+    .dropdown
+        // visibility: hidden
+        overflow: hidden
+        max-height: 0px
+        position: absolute
+        left: 0
+        top: 80px
+        width: 100%
+        background: #ffffffb7
+        // display: flex
+        // padding: 50px 0 50px 100px
+        align-items: center
+        transition: .6s ease
+        transition-delay: .2s
+        &__box
+            display: flex
+            align-items: center
+            padding: 50px 0 50px 100px
+            width: 100%
+        .dropdownlist
+            width: 500px
+            display: flex
+            flex-direction: row
+            flex-wrap: wrap
+            align-items: center
+            height: 170px
+            &__item
+                width: 250px
+                height: 45px
+                // text-align: left
+                display: flex
+                justify-content: left
+                align-items: center
+                a
+                    line-height: 45px
+                i
+                    width: 45px
+                    height: 45px
+                    border-radius: 50%
+                    background: white
+                    color: #4d4d4db7
+                    padding: 10px
+                    margin-right: 10px
+        .dropdownevent
+            &__img
+                width: 400px
+            &__caption
+                text-align: left
+    .menulist
+        // visibility: hidden
+        left: 50%
+        transform: translateX(-50%)
+        transition: .6s ease
+        position: absolute
+        top: 50px
+        background: #ffffffd7
+        transition-delay: .1s
+        max-height: 0px
+        overflow: hidden
+        &__item
+            height: 45px
+            width: 140px
+            margin: 0 5px
+            line-height: 45px
+            text-align: center
+            border-bottom: 1px solid #dedede
+    .submenu
+        display: flex
+        z-index: 30
+        &__item
+            height: 120px
+            width: 140px
+            // background: aqua
+            display: flex
+            flex-direction: column
+            color: white
+            align-items: center
+            justify-content: center
+            a
+                color: white
+            i
+                font-size: 30px
+                margin-bottom: 7px
+            &--search
+                width: 170px
+                height: 80px
+                justify-content: center
+                align-items: center
+                background: white
+                border-left: 1px solid rgba(0, 0, 0, 0.18)
+                display: grid
+                grid-template-columns: 1fr 2fr
+                grid-template-rows: 40px
+                // flex-direction: row
+                padding: 20px 25px
+                // text-align: center
+                align-items: center
+                i
+                    color: #6B6B6B
+                    grid-column-start: 1
+                    grid-column-end: 2
+                    grid-row-start: 1
+                    grid-row-end: 2
+                    width: 100%
+                    margin-bottom: 0
+                div
+                    grid-column-start: 2
+                    grid-column-end: 3
+                    grid-row-start: 1
+                    grid-row-end: 2
+                a
+                    color: #6B6B6B
+                    text-align: center
+                    display: inline-block
+                &--ch
+                    font-size: 16px
+                    font-weight: 600
+                    letter-spacing: 1px
+                &--eng
+                    font-weight: 100
+                    font-size: 12px
+                    letter-spacing: 3px
+            &--member
+                background: linear-gradient(135deg, #28bac3, #16b48c)
+                position: relative
+                &:hover
+                    background: linear-gradient(315deg, #28bac3, #16b48c)
+            &--member::after
+                display: block
+                content: '登入/註冊'
+                color: #626262
+                font-size: 14px
+                text-align: center
+                line-height: 40px
+                position: absolute
+                height: 0px
+                width: 100%
+                // bottom: -40px
+                top: 120px
+                left: 0
+                background: #d8d8d8e3
+                transition: .4s ease
+                overflow: hidden
+                // transform-origin: bottom
+            &--member:hover::after
+                height: 40px
+                transition: 0s
+            &--cart
+                background: linear-gradient(135deg, #086dda, #005bac)
+                &:hover
+                    background: linear-gradient(315deg, #086dda, #005bac)
+    .sign
+        position: fixed
+        width: 100vw
+        height: 100vh
+        background: rgba(105, 115, 131, 0.8)
+        left: 0
+        top: 0
+        display: none
+        &--open
+            display: block
+        &--close
+            position: absolute
+            height: 50px
+            width: 43px
+            // color: salmon
+            position: absolute
+            right: 0px
+            top: -65px
+            cursor: pointer
+            &::before
+                content: ''
+                display: block
+                // width: 1.5px
+                // background: white
+                height: 55px
+                width: 2px
+                border-left: 2px solid white
+                position: absolute
+                top: 0px
+                left: 19px
+                transition: .6s ease-out
+                transform: rotate(-45deg) scale(100%,100%)
+            &::after
+                content: ''
+                display: block
+                height: 55px
+                width: 2px
+                border-left: 2px solid white
+                position: absolute
+                top: 0px
+                left: 19px
+                transition: .6s ease-out
+                transform: rotate(45deg) scale(100%,100%)
+        &__popup
+            display: flex
+            flex-direction: column
+            align-items: center
+            padding: 60px 80px
+            background: white
+            border: 2px solid #00962d
+            position: absolute
+            left: 50vw
+            top: 50vh
+            transform: translate(-50%,-50%)
+            width: 1000px
+        &__block
+            display: flex
+            justify-content: center
+            width: 500px
+            margin-bottom: 15px
+            align-items: center
+            // margin: auto
+            &--input
+                justify-content: space-between
+                margin-bottom: 25px
+            &--button
+                margin: 25px 0 25px
+        &__button
+            appearance: none
+            width: 280px
+            height: 50px
+            background: #434343
+            letter-spacing: 3px
+            color: white
+            cursor: pointer
+            font-size: 15px
+        &__label
+            font-size: 14px
+            letter-spacing: 1px
+            color: #636363
+        &__input
+            height: 45px
+            width: 380px
+            border: .5px solid #dadada
+            padding-left: 10px
+            cursor: pointer
+            font-size: 14px
+        &__caption
+            font-size: 14px
+            color: #a1a1a1
+        &__url
+            font-size: 14px
+            color: #565acc
+            padding: 0 20px
+            line-height: 18px
+            &--forgetpassword
+                border-right: 1px solid #565acc
+            &--sign
+                padding: 0
+                color: #32b490
+                // text-decoration: underline
+                border-bottom: 1px solid #32b490
+
+.header
+    .menu
+        .pc--none
+            display: none
+            transition: .3s ease
+
+@media screen and (max-width: 1349px) and (min-width: 1024px)
+    .header
+        .menu
+            height: 70px
+            .mainmenu
+                &__item
+                    width: 83px
+                    a
+                        letter-spacing: 1.5px
+                        font-size: 14px
+                &__logo
+                    width: 150px
+                    margin: 0 25px
+                .dropdown
+                    top: 70px
+                    &__box
+                        align-items: start
+                        padding: 30px 0 30px 70px
+                    .dropdownlist
+                        width: 420px
+                        &__item
+                            width: 200px
+                    .dropdownevent
+                        margin-top: 10px
+                        &__img
+                            width: 260px
+                .menulist
+                    top: 45px
+                    &__item
+                        height: 35px
+                        width: 120px
+                        margin: 0 5px
+                        line-height: 35px
+                        a
+                            font-size: 13px
+            .submenu
+                &__item
+                    width: 90px
+                    height: 90px
+                    a
+                        font-size: 14px
+                    i
+                        font-size: 23px
+                    &--search
+                        height: 65px
+                        width: 125px
+                        padding: 13px 3px
+                        i
+                            color: #6B6B6B
+                            width: 100%
+                            font-size: 23px
+                            margin-bottom: 0
+                        a
+                            color: #6B6B6B
+                            text-align: center
+                            display: inline-block
+                        &--ch
+                            font-size: 12px
+                            font-weight: 600
+                            letter-spacing: 1px
+                        &--eng
+                            font-weight: 100
+                            font-size: 10px
+                            letter-spacing: 0px
+                    &--member
+                        &::after
+                            font-size: 13px
+                            line-height: 30px
+                            width: 100%
+                            top: 80px
+                        &:hover::after
+                            height: 30px
+
+@media screen and (max-width: 1023.9px) and (min-width: 960px)
+    .header
+        .menu
+            height: 65px
+            .mainmenu
+                &__item
+                    width: 80px
+                    a
+                        letter-spacing: 1px
+                        font-size: 14px
+                &__logo
+                    width: 125px
+                    margin: 0 12px
+                .dropdown
+                    top: 65px
+                    &__box
+                        align-items: start
+                        padding: 30px 0 30px 50px
+                    .dropdownlist
+                        width: 420px
+                        &__item
+                            width: 200px
+                    .dropdownevent
+                        margin-top: 10px
+                        &__img
+                            width: 260px
+                .menulist
+                    top: 42px
+                    &__item
+                        height: 35px
+                        width: 120px
+                        margin: 0 5px
+                        line-height: 35px
+                        a
+                            font-size: 13px
+            .submenu
+                &__item
+                    width: 80px
+                    height: 80px
+                    a
+                        font-size: 14px
+                    i
+                        font-size: 20px
+                    &--search
+                        height: 65px
+                        width: 125px
+                        padding: 13px 3px
+                        i
+                            color: #6B6B6B
+                            width: 100%
+                            font-size: 23px
+                            margin-bottom: 0
+                        a
+                            color: #6B6B6B
+                            text-align: center
+                            display: inline-block
+                        &--ch
+                            font-size: 12px
+                            font-weight: 600
+                            letter-spacing: 1px
+                        &--eng
+                            font-weight: 100
+                            font-size: 10px
+                            letter-spacing: 0px
+                    &--member
+                        &::after
+                            font-size: 13px
+                            line-height: 30px
+                            width: 100%
+                            top: 80px
+                        &:hover::after
+                            height: 30px
+
+@media screen and (max-width: 959.9px)
+    .header
+        .menu
+            height: 60px
+            .mainmenu
+                &__logo
+                    width: 125px
+            .submenu
+                &__item
+                    width: 60px
+                    height: 60px
+                    i
+                        font-size: 30px
+                        margin-bottom: 0
+
+            .pc--none
+                display: block
+                transition: .3s ease
+            .phone--none
+                display: none

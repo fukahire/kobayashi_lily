@@ -1,0 +1,165 @@
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+// html
+//     overflow: scroll
+
+::-webkit-scrollbar
+    width: 0px
+    background: transparent
+     /* make scrollbar transparent */
+
+.header li , a
+    list-style: none
+    text-decoration: none
+    color: #8b8b8b
+
+.menu--hamburger
+    height: 60px
+    width: 60px
+    background: linear-gradient(135deg, #28bac3, #16b48c)
+    color: white
+    text-align: center
+    line-height: 63px
+    font-size: 30px
+    i
+
+.menu--phone
+    z-index: 50
+    background: #f4f4f4
+    width: 100%
+    height: 100vh
+    position: fixed
+    overflow: scroll
+    top: 0px
+    left: -100vw
+    transition: .4s ease-out
+    &--open
+        left: 0vw
+    .phonesearch
+        z-index: 10
+        display: flex
+        align-items: center
+        height: 45px
+        width: 100%
+        background: #dbdbdb
+        justify-content: space-between
+        // position: fixed
+        top: 0
+        left: 0
+        &__icon
+            width: 50px
+            color: gray
+            font-size: 20px
+        input
+            background: none
+            border: none
+            border-left: 1px solid black
+            height: 20px
+            padding-left: 10px
+            width: 100%
+        .list--close
+            height: 100%
+            width: 45px
+            background: black
+            color: white
+            position: relative
+            &::before
+                content: ''
+                display: block
+                // width: 1.5px
+                // background: white
+                height: 30px
+                width: 1.5px
+                border-left: 2px solid white
+                position: absolute
+                top: 7px
+                left: 19px
+                transition: .6s ease-out
+                transform: rotate(-45deg) scale(100%,100%)
+            &::after
+                content: ''
+                display: block
+                height: 30px
+                width: 1.5px
+                border-left: 2px solid white
+                position: absolute
+                top: 8px
+                left: 19px
+                transition: .6s ease-out
+                transform: rotate(45deg) scale(100%,100%)
+            &--animation::before
+                transform: rotate(-135deg) scale(0%,0%)
+                transition: .7s ease-out
+            &--animation::after
+                transform: rotate(-45deg) scale(0%,0%)
+                transition: .7s ease-out
+    .phonelist
+        // margin-top: 45px
+        padding: 20px
+        &__item
+            width: 100%
+            height: 50px
+            border-bottom: 1px solid #E3E3E3
+            font-size: 14px
+            font-weight: 600
+            letter-spacing: 1px
+            line-height: 50px
+            padding-left: 20px
+            &--sub
+                font-weight: 400
+        &__toggle
+            position: relative
+            &::after
+                content: ''
+                width: 8px
+                height: 8px
+                display: block
+                position: absolute
+                top: 23px
+                right: 7px
+                transform: rotate(-225deg)
+                border-top: 1px solid gray
+                border-right: 1px solid gray
+                transition: .3s ease
+            &--open::after
+                transform: rotate(-45deg)
+        &__button
+            width: 100%
+            height: 43px
+            line-height: 43px
+            letter-spacing: 1px
+            font-size: 14px
+            background: #279a88
+            text-align: center
+            font-weight: 300
+            border-radius: 5px
+            a
+                color: white
+        .sublist
+            max-height: 0
+            transition: .4s ease
+            overflow: hidden
+            &--open
+                display: block
+                max-height: 1000px
+                transition: .4s ease
+            &__item
+                height: 50px       
+    .phonemedia
+        display: flex
+        flex-direction: column
+        align-items: center
+        height: 130px
+        padding-top: 10px
+        &__item
+            height: 40px
+        &__platform
+            height: 30px
+        &__app
+            width: 35px
+
+
