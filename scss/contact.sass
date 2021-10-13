@@ -1,4 +1,5 @@
 @import './_header'
+@import './_banner'
 @import './_breadcrumbs'
     
 *
@@ -12,6 +13,7 @@ html
 
 ::-webkit-scrollbar 
     width: 0px
+    height: 0px
     background: transparent
      /* make scrollbar transparent */
 
@@ -35,36 +37,6 @@ html
 
 .banner
     background: url(https://www.kobayashi.com.tw/images/contact/banner_img.jpg)
-    background-attachment: fixed
-    background-size: 100% auto
-    height: 390px
-    width: 100%
-    padding-top: 170px
-    &__title
-        margin: 0 auto
-        font-size: 58px
-        letter-spacing: 5px
-        text-align: center
-        color: #333
-        font-weight: 600
-    &__subtitle
-        margin: 0 auto
-        text-align: center
-
-.breadcrumbs
-    width: 100%
-    background: #e8ebee
-    padding: 20px 0 20px 140px
-    display: flex
-    align-items: center
-    &__item
-        color: #999999
-        margin: 0 10px
-        p
-            color: #666
-            font-size: 14px
-    &__arrow
-        color: #999999
 
 body
     background: #e3e3e3
@@ -203,18 +175,7 @@ body
     50%
         left: 150px
 
-@media (min-width: 1500.1px) and (max-width: 1680px)
-    .banner
-        height: 390px
-
 @media (min-width: 1350.1px) and (max-width: 1500px)
-    .banner
-        height: 300px
-        padding-top: 135px
-        &__title
-            font-size: 45px
-    .breadcrumbs
-        // padding: 20px 0 20px 100px
     .contact
         width: 880px
         padding: 40px 0px
@@ -226,13 +187,6 @@ body
                     width: 600px
 
 @media (min-width: 960.1px) and (max-width: 1350px)
-    .banner
-        height: 250px
-        padding-top: 100px
-        &__title
-            font-size: 40px
-    .breadcrumbs
-        padding: 20px 0 20px 10vw
     .contact
         width: 880px
         padding: 40px 0px
@@ -244,13 +198,6 @@ body
                     width: 600px
 
 @media (min-width: 700.1px) and (max-width: 960px)
-    .banner
-        height: 200px
-        padding-top: 80px
-        &__title
-            font-size: 30px
-    .breadcrumbs
-        padding: 16px 0 16px 40px
     .contact
         width: 680px
         padding: 40px 0px
@@ -262,20 +209,6 @@ body
                     width: 400px
         
 @media (max-width: 700px)
-    .banner
-        height: 160px
-        padding-top: 60px
-        &__title
-            margin: 0 auto
-            font-size: 20px
-            letter-spacing: 3px
-            text-align: center
-            &__subtitle
-                margin-top: 5px
-                p
-                    font-size: 10px
-    .breadcrumbs
-        padding: 16px 0 16px 30px
     .contact
         width: 95%
         padding: 40px 0px

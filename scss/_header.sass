@@ -10,21 +10,22 @@ body
     // background: salmon
 
 .header
+    position: fixed
+    width: 100%
+    top: 0
     transition: .4s ease
+    z-index: 3
     a
         color: #6B6B6B
         text-decoration: none
     ul, li
         list-style: none
-    .menu
-        position: fixed
-        width: 100%
+    .menu  
         background: white
         display: flex
         justify-content: space-between
         box-shadow: 3px 3px 10px gray
         height: 80px
-        z-index: 3
         .mainmenu
             display: inline-flex
             align-items: center
