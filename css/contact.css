@@ -258,6 +258,8 @@
 }
 
 .header .menu {
+  position: fixed;
+  width: 100%;
   background: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -268,6 +270,7 @@
   -webkit-box-shadow: 3px 3px 10px gray;
           box-shadow: 3px 3px 10px gray;
   height: 80px;
+  z-index: 3;
 }
 
 .header .menu .mainmenu {
@@ -425,6 +428,8 @@
 }
 
 .header .dropdown .dropdownlist__item i {
+  line-height: 25px;
+  font-size: 21px;
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -498,7 +503,9 @@
 
 .header .submenu__item i {
   font-size: 30px;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
 }
 
 .header .submenu__item--search {
@@ -564,6 +571,8 @@
 .header .submenu__item--member {
   background: linear-gradient(135deg, #28bac3, #16b48c);
   position: relative;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
 }
 
 .header .submenu__item--member:hover {
@@ -582,7 +591,7 @@
   width: 100%;
   top: 120px;
   left: 0;
-  background: #d8d8d8e3;
+  background: #f3f3f3f1;
   -webkit-transition: .4s ease;
   transition: .4s ease;
   overflow: hidden;
@@ -596,6 +605,8 @@
 
 .header .submenu__item--cart {
   background: linear-gradient(135deg, #086dda, #005bac);
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
 }
 
 .header .submenu__item--cart:hover {

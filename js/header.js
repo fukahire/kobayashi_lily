@@ -51,3 +51,27 @@ $(document).ready(function () {
     });
 })
 
+window.onscroll = function() {scrollFunction()};
+
+if($(window).width() > 1349)
+{
+// JavaScript here
+// 當視窗寬度小於767px時執行
+} else {
+// JavaScript here
+// 當視窗寬度不小於767px時執行
+}
+function scrollFunction() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80 ) {
+    document.querySelector(".submenu__item--member").style.height = "80px";
+    document.querySelector(".submenu__item--member>i").style.fontSize = "24px";
+    document.querySelector(".submenu__item--cart").style.height = "80px";
+    document.querySelector(".submenu__item--cart>i").style.fontSize = "24px";
+  } else {
+    document.querySelector(".submenu__item--member").style.height = "120px";
+    document.querySelector(".submenu__item--member>i").style.fontSize = "30px";
+    document.querySelector(".submenu__item--cart").style.height = "120px";
+    document.querySelector(".submenu__item--cart>i").style.fontSize = "30px";
+  }
+}
+
