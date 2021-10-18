@@ -49,17 +49,32 @@ $(document).ready(function () {
         $(this).toggleClass("phonelist__toggle--open").siblings().removeClass("phonelist__toggle--open");
 
     });
+
+    // footer
+    $(".maplist__item:nth-child(1)").click(function () {
+
+        $('.sitemap__block:nth-child(1)').toggleClass("sitemap__block--open").siblings().removeClass("sitemap__block--open");
+
+    });
+
+    $(".maplist__item:nth-child(4)").click(function () {
+
+        $('.sitemap__block:nth-child(2)').toggleClass("sitemap__block--open").siblings().removeClass("sitemap__block--open");
+
+    });
+
+    $(".sitetitle--close").click(function () {
+        $('.sitemap__block').removeClass("sitemap__block--open");
+    });
+
+    $(".maplist__item:nth-child(3)").click(function () {
+        $('.maplist__item--recruit').toggleClass("maplist__item--recruit--open");
+    });
+    
 })
 
 window.onscroll = function () { scrollFunction() };
 
-if ($(window).width() > 1349) {
-    // JavaScript here
-    // 當視窗寬度小於767px時執行
-} else {
-    // JavaScript here
-    // 當視窗寬度不小於767px時執行
-}
 function scrollFunction() {
     if (document.querySelector('body').clientWidth < 959.9) {
         document.querySelector(".submenu__item--member").style.height = "60px";
@@ -82,6 +97,8 @@ function scrollFunction() {
         document.querySelector(".submenu__item--cart>i").style.fontSize = "30px";
     }
 }
+
+
 
 // function scrollFunction() {
 //     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80 ) {

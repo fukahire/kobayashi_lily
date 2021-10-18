@@ -1,0 +1,275 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+.footer
+    ul,li
+        list-style: none
+    a
+        text-decoration: none
+        color: #4d4d4d
+        font-size: 14px
+    p
+        color: #4d4d4d
+        font-size: 14px
+    .sitemap
+        &__block
+            overflow: hidden
+            max-height: 0
+            transition: .4s ease
+            &--open
+                max-height: 1000px
+            .sitetitle
+                width: 100%
+                background: #6b7a90
+                padding: 13px 0
+                &__item
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    max-width: 1000px
+                    width: 80%
+                    margin: 0 auto
+                    position: relative
+                    a
+                        font-size: 18px
+                        color: white
+                &__title
+                    margin-left: 20px
+                &--close
+                    height: 24px
+                    width: 24px
+                    cursor: pointer
+                    // position: relative
+                    &::before
+                        content: ''
+                        display: block
+                        height: 30px
+                        width: 1.5px
+                        top: -3px
+                        border-left: 2px solid white
+                        position: absolute
+                        // left: 19px
+                        right: 10px
+                        transition: .6s ease-out
+                        transform: rotate(-45deg) scale(100%,100%)
+                    &::after
+                        content: ''
+                        display: block
+                        height: 30px
+                        width: 1.5px
+                        border-left: 2px solid white
+                        position: absolute
+                        top: -3px
+                        // left: 19px
+                        right: 10px
+                        transition: .6s ease-out
+                        transform: rotate(45deg) scale(100%,100%)
+            .sitelist
+                display: flex
+                max-width: 1000px
+                width: 80%
+                margin: 0 auto 60px
+                padding: 30px 0 0
+                &__item
+                    margin: 0 20px
+                    width: 110px
+                &__title
+                    font-size: 15px
+                    font-weight: 600
+                .sitecategory
+                    margin: 20px 0 0
+                    &__item
+                        margin: 8px 0
+                        a
+                            font-size: 15px
+
+    .map
+        width: 100%
+        background: #ebebeb
+        padding: 8px 0
+        &__block
+            width: 90%
+            max-width: 1300px
+            height: 60px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            // padding: 0 140px
+            margin: 0 auto
+        .maplogo
+            display: flex
+            align-items: center
+            img
+                width: 130px
+                margin-right: 10px
+        .maplist
+            display: flex
+            align-items: center
+            &__item
+                padding: 0 18px
+                border-right: 1px solid black
+                position: relative
+                cursor: pointer
+                &--last
+                    border: none
+                &--recruit
+                    display: flex
+                    background: #ffffffbe
+                    position: absolute
+                    bottom: 10px
+                    left: 50%
+                    transform: translateX(-50%)
+                    width: 170px
+                    justify-content: center
+                    align-items: center
+                    padding: 10px 0
+                    border-radius: 5px
+                    visibility: hidden
+                    transition: .4s ease
+                    opacity: 0
+                    z-index: 100
+                    &--open
+                        bottom: 35px
+                        opacity: 100%
+                        visibility: visible
+            &__recruit
+                font-size: 14px
+                padding: 0 15px
+                border-right: 1px solid black
+                &--end
+                    border: none
+
+        .mapapp
+            display: flex
+            align-items: center
+            &__caption
+                margin-right: 10px
+            &__app
+                img
+                    width: 90px
+    .footerinfo
+        width: 100%
+        padding: 20px 0 0
+        background: #dddddd
+        display: flex
+        flex-direction: column
+        justify-content: center
+        &__media
+            text-align: center
+        &__mediaapp
+            width: 38px
+            margin: 0 8px
+        &__caption
+            .infoblock
+                display: flex
+                align-items: center
+                justify-content: center
+                margin: 15px
+                &--address
+                &__item
+                    padding: 0 18px
+                    border-right: 1px solid black
+                    &--last
+                        border: none
+                    &--address
+                        border: none
+                        padding: 0
+        &--copyright
+            display: flex
+            justify-content: center
+            text-align: center
+            padding: 0 0 20px
+            span
+                font-weight: 600
+
+@media screen and (max-width: 1349px) and (min-width: 1024px)
+    .column
+        flex-direction: column
+        &--reverse
+            flex-direction: column-reverse
+    .footer
+        .map
+            &__block
+                max-width: 900px
+        .sitemap
+            .sitetitle
+                &__item
+                    width: 95%
+                    max-width: 900px
+                &__title
+                    margin-left: 10px
+            .sitelist
+                width: 95%
+                max-width: 900px
+                &__item
+                    margin: 0 10px
+
+@media screen and (max-width: 1023.9px) and (min-width: 960px)
+    .column
+        flex-direction: column
+        &--reverse
+            flex-direction: column-reverse
+    .footer
+        .map
+            &__block
+                max-width: 800px
+        .sitemap
+            .sitetitle
+                &__item
+                    width: 95%
+                    max-width: 800px
+                &__title
+                    margin-left: 5px
+            .sitelist
+                width: 95%
+                max-width: 800px
+                &__item
+                    margin: 0 5px
+
+@media screen and (max-width: 959px)
+    .phone--none
+        display: none
+    .footer
+        .map
+            background: #00000000
+            padding: 40px 0 0
+            &__block
+                flex-direction: column-reverse
+                .phone--none
+                    display: none
+            .mapapp
+                margin-bottom: 20px
+        .footerinfo
+            flex-direction: column-reverse
+            background: #00000000
+            padding: 0
+            margin-bottom: 20px
+            &__caption
+                // width: 500px
+                // flex-wrap: wrap
+                .infoblock
+                    width: 350px
+                    flex-wrap: wrap
+                    text-align: center
+                    margin: 8px auto
+                    &--address
+                        flex-direction: column
+                    &__item
+                        p
+                            font-size: 13px
+                        margin: 4px 0
+                        &--address
+                            // display: block
+                    .border--none--phone
+                        border: none
+            &--copyright
+                padding: 5px 0
+                background: #333
+                margin: 0
+                p
+                    font-size: 13px
+                    color: white
+            .column--reverse
+                flex-direction: column-reverse
